@@ -1,165 +1,557 @@
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AQS Privacy Policy</title>
+
+<title>AQS — Privacy Policy | ArchTek Nexus</title>
+
+<meta
+    name="description"
+    content="Privacy Policy for AQS — ArchTek Nexus Quant System."
+>
 
 <style>
+:root {
+    --bg: #080C11;
+    --panel: #0D141B;
+    --panel-hover: #111B24;
+    --border: #1C303B;
+    --cyan: #00E5FF;
+    --cyan-soft: #65F2FF;
+    --text: #E6F7FA;
+    --muted: #91A7AE;
+    --green: #39E58C;
+    --shadow: rgba(0, 229, 255, 0.08);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background: #0B0F14;
-    color: #E0F7FF;
-    max-width: 800px;
-    margin: auto;
-    padding: 40px;
-    line-height: 1.6;
+    margin: 0;
+    min-height: 100vh;
+    background:
+        radial-gradient(
+            circle at 50% -10%,
+            rgba(0, 229, 255, 0.08),
+            transparent 38%
+        ),
+        var(--bg);
+    color: var(--text);
+    font-family:
+        Inter,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+    line-height: 1.65;
+}
+
+/* ---------- Layout ---------- */
+
+.page {
+    width: min(100% - 32px, 960px);
+    margin: 0 auto;
+    padding: 42px 0 60px;
+}
+
+/* ---------- Header ---------- */
+
+.header {
+    position: relative;
+    padding: 30px 30px 28px;
+    margin-bottom: 22px;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    background:
+        linear-gradient(
+            145deg,
+            rgba(0, 229, 255, 0.06),
+            rgba(13, 20, 27, 0.96) 45%
+        );
+    box-shadow: 0 12px 45px var(--shadow);
+    overflow: hidden;
+}
+
+.header::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--cyan),
+        transparent
+    );
+    opacity: 0.75;
+}
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    color: var(--cyan);
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.brand-mark {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--cyan);
+    box-shadow: 0 0 12px rgba(0, 229, 255, 0.8);
 }
 
 h1 {
-    color: #00E5FF;
+    margin: 0;
+    color: var(--text);
+    font-size: clamp(2rem, 5vw, 3rem);
+    line-height: 1.1;
+    letter-spacing: -0.03em;
 }
 
-h2 {
-    color: #E0F7FF;
-    margin-top: 28px;
+.subtitle {
+    margin: 12px 0 0;
+    max-width: 700px;
+    color: var(--muted);
+    font-size: 1rem;
 }
+
+/* ---------- Status ---------- */
+
+.policy-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 22px;
+}
+
+.meta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 11px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: rgba(0, 0, 0, 0.18);
+    color: var(--muted);
+    font-size: 0.78rem;
+}
+
+.meta-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--green);
+    box-shadow: 0 0 8px rgba(57, 229, 140, 0.65);
+}
+
+/* ---------- Content ---------- */
+
+.intro {
+    padding: 22px 24px;
+    margin-bottom: 16px;
+    border-left: 3px solid var(--cyan);
+    border-radius: 10px;
+    background: rgba(0, 229, 255, 0.035);
+    color: var(--text);
+}
+
+.section {
+    margin-top: 14px;
+    padding: 24px 26px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: var(--panel);
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease;
+}
+
+.section:hover {
+    border-color: rgba(0, 229, 255, 0.35);
+    background: var(--panel-hover);
+}
+
+.section h2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 0 10px;
+    color: var(--cyan-soft);
+    font-size: 1.12rem;
+    letter-spacing: 0.01em;
+}
+
+.section h2::before {
+    content: "";
+    width: 4px;
+    height: 18px;
+    border-radius: 2px;
+    background: var(--cyan);
+    box-shadow: 0 0 8px rgba(0, 229, 255, 0.35);
+}
+
+.section p {
+    margin: 8px 0;
+    color: #C9DCE0;
+}
+
+.section p:last-child {
+    margin-bottom: 0;
+}
+
+/* ---------- Links ---------- */
 
 a {
-    color: #00E5FF;
+    color: var(--cyan);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0, 229, 255, 0.35);
+}
+
+a:hover {
+    color: white;
+    border-bottom-color: var(--cyan);
+}
+
+/* ---------- Highlight ---------- */
+
+.deletion {
+    border-color: rgba(0, 229, 255, 0.35);
+    background:
+        linear-gradient(
+            135deg,
+            rgba(0, 229, 255, 0.07),
+            rgba(13, 20, 27, 0.96)
+        );
+}
+
+.action-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+    padding: 9px 14px;
+    border: 1px solid rgba(0, 229, 255, 0.35);
+    border-radius: 8px;
+    background: rgba(0, 229, 255, 0.06);
+    font-weight: 600;
+}
+
+.action-link:hover {
+    background: rgba(0, 229, 255, 0.12);
+}
+
+/* ---------- Footer ---------- */
+
+.footer {
+    margin-top: 34px;
+    padding: 24px 4px 0;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.82rem;
+}
+
+.footer strong {
+    color: var(--text);
+}
+
+.footer-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-note {
+    margin-top: 12px;
+    color: #647B83;
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 600px) {
+
+    .page {
+        width: min(100% - 20px, 960px);
+        padding: 18px 0 40px;
+    }
+
+    .header {
+        padding: 24px 20px;
+        border-radius: 13px;
+    }
+
+    .section {
+        padding: 20px;
+        border-radius: 12px;
+    }
+
+    .intro {
+        padding: 18px 20px;
+    }
+
+    .footer-grid {
+        display: block;
+    }
 }
 </style>
 </head>
 
 <body>
 
-<h1>AQS Privacy Policy</h1>
+<main class="page">
 
-<p>
-AQS (ArchTek Nexus Quant System) respects user privacy and is designed to
-collect and process only the information required to provide its account,
-subscription, notification, and market-information features.
-</p>
+    <header class="header">
 
-<h2>Account Information</h2>
+        <div class="brand">
+            <span class="brand-mark"></span>
+            ArchTek Nexus
+        </div>
 
-<p>
-AQS uses account authentication services to provide user account
-functionality. Information associated with an AQS account may be processed
-for authentication, account management, and providing the application's
-features.
-</p>
+        <h1>AQS Privacy Policy</h1>
 
-<h2>Account Deletion</h2>
+        <p class="subtitle">
+            Privacy information for the ArchTek Nexus Quant System (AQS),
+            including account services, market information, notifications,
+            subscriptions, and related application services.
+        </p>
 
-<p>
-Users may request deletion of their AQS account from within the application
-through the Account &amp; Privacy section.
-</p>
+        <div class="policy-meta">
+            <span class="meta">
+                <span class="meta-dot"></span>
+                Current Policy
+            </span>
 
-<p>
-A web-based account deletion request is also available at:
-<a href="https://archteknexus.com/delete-account">
-https://archteknexus.com/delete-account
-</a>
-</p>
+            <span class="meta">
+                AQS — ArchTek Nexus Quant System
+            </span>
+        </div>
 
-<p>
-When an account deletion request is submitted, AQS processes the request
-according to the account and data associated with that service.
-</p>
+    </header>
 
-<h2>Market Data</h2>
 
-<p>
-AQS retrieves public market data from external sources and processes that
-information to display market conditions, market statistics, and regime
-classifications.
-</p>
+    <section class="intro">
 
-<p>
-Market data is not used to execute trades or financial transactions on
-behalf of the user.
-</p>
+        <strong>Our approach to privacy</strong>
 
-<h2>Notifications</h2>
+        <p>
+            ArchTek Nexus is committed to handling information responsibly
+            and transparently. AQS is designed to process the information
+            required to provide its account, subscription, notification,
+            and market-information features.
+        </p>
 
-<p>
-If enabled by the user, AQS may send notifications relating to market alerts,
-including price thresholds, structural changes, and other supported market
-conditions.
-</p>
+    </section>
 
-<h2>Subscriptions and Payments</h2>
 
-<p>
-AQS may provide subscription-based features. Purchases and subscription
-transactions distributed through Google Play are processed using the
-applicable Google Play billing services.
-</p>
+    <section class="section">
 
-<p>
-AQS does not directly process or store the user's payment card details.
-</p>
+        <h2>Account Information</h2>
 
-<h2>Third-Party Services</h2>
+        <p>
+            AQS uses account authentication services to provide user account
+            functionality. Information associated with an AQS account may
+            be processed for authentication, account management, and
+            providing the application's supported features.
+        </p>
 
-<p>
-AQS may use third-party services required to provide application
-functionality, authentication, notifications, subscriptions, distribution,
-and infrastructure services.
-</p>
+    </section>
 
-<p>
-These services may process information according to their own privacy
-policies and applicable terms.
-</p>
 
-<h2>Data Usage</h2>
+    <section class="section deletion">
 
-<p>
-Information processed by AQS is used to provide and maintain the
-application's functionality, authenticate accounts, support subscriptions,
-deliver enabled notifications, and provide market information and regime
-analysis.
-</p>
+        <h2>Account Deletion</h2>
 
-<p>
-Market information displayed by AQS is provided for informational and
-analytical purposes only. AQS does not execute financial trades or
-transactions within the application.
-</p>
+        <p>
+            Users may request deletion of their AQS account from within the
+            application through the <strong>Account &amp; Privacy</strong>
+            section.
+        </p>
 
-<h2>Data Security</h2>
+        <p>
+            A web-based account deletion request is also available for users
+            who prefer to submit their request outside the application.
+        </p>
 
-<p>
-ArchTek Nexus takes reasonable measures to protect information processed by
-AQS. No internet-based service can guarantee absolute security, and users
-should understand that information transmitted over the internet may carry
-inherent security risks.
-</p>
+        <a
+            class="action-link"
+            href="https://archteknexus.com/delete-account"
+        >
+            Request Account Deletion →
+        </a>
 
-<h2>Privacy Requests and Contact</h2>
+    </section>
 
-<p>
-For privacy-related questions, data requests, or assistance with account
-deletion, contact:
-</p>
 
-<p>
-<a href="mailto:support@archteknexus.co.za">
-support@archteknexus.co.za
-</a>
-</p>
+    <section class="section">
 
-<h2>Policy Updates</h2>
+        <h2>Market Data</h2>
 
-<p>
-This Privacy Policy may be updated when AQS functionality, services, or
-applicable requirements change. The current version of this policy will be
-made available at this web address.
-</p>
+        <p>
+            AQS retrieves public market data from external sources and
+            processes that information to display market conditions,
+            market statistics, and regime classifications.
+        </p>
+
+        <p>
+            Market information is provided for informational and analytical
+            purposes. AQS does not execute financial trades or transactions
+            on behalf of users.
+        </p>
+
+    </section>
+
+
+    <section class="section">
+
+        <h2>Notifications</h2>
+
+        <p>
+            If enabled by the user, AQS may send notifications relating to
+            market alerts, including price thresholds, structural changes,
+            and other supported market conditions.
+        </p>
+
+    </section>
+
+
+    <section class="section">
+
+        <h2>Subscriptions &amp; Payments</h2>
+
+        <p>
+            AQS may provide subscription-based features. Purchases and
+            subscription transactions distributed through Google Play are
+            processed using the applicable Google Play billing services.
+        </p>
+
+        <p>
+            AQS does not directly process or store the user's payment card
+            details.
+        </p>
+
+    </section>
+
+
+    <section class="section">
+
+        <h2>Third-Party Services</h2>
+
+        <p>
+            AQS may use third-party services required to provide application
+            functionality, authentication, notifications, subscriptions,
+            distribution, and infrastructure services.
+        </p>
+
+        <p>
+            These services may process information according to their own
+            privacy policies and applicable terms.
+        </p>
+
+    </section>
+
+
+    <section class="section">
+
+        <h2>Data Usage</h2>
+
+        <p>
+            Information processed by AQS is used to provide and maintain
+            application functionality, authenticate accounts, support
+            subscriptions, deliver enabled notifications, and provide
+            market information and regime analysis.
+        </p>
+
+        <p>
+            AQS does not use the application to execute financial trades
+            or transactions.
+        </p>
+
+    </section>
+
+
+    <section class="section">
+
+        <h2>Data Security</h2>
+
+        <p>
+            ArchTek Nexus takes reasonable measures to protect information
+            processed by AQS. No internet-based service can guarantee
+            absolute security, and users should understand that information
+            transmitted over the internet may carry inherent security risks.
+        </p>
+
+    </section>
+
+
+    <section class="section">
+
+        <h2>Privacy Requests &amp; Contact</h2>
+
+        <p>
+            For privacy-related questions, data requests, or assistance
+            with account deletion, contact the ArchTek Nexus support team:
+        </p>
+
+        <p>
+            <a href="mailto:support@archteknexus.co.za">
+                support@archteknexus.co.za
+            </a>
+        </p>
+
+    </section>
+
+
+    <section class="section">
+
+        <h2>Policy Updates</h2>
+
+        <p>
+            This Privacy Policy may be updated when AQS functionality,
+            services, or applicable requirements change. The current version
+            will remain available at this web address.
+        </p>
+
+    </section>
+
+
+    <footer class="footer">
+
+        <div class="footer-grid">
+
+            <div>
+                <strong>ArchTek Nexus</strong><br>
+                Engineering technology for the future.
+            </div>
+
+            <div>
+                AQS — ArchTek Nexus Quant System
+            </div>
+
+        </div>
+
+        <div class="footer-note">
+            © ArchTek Nexus. All rights reserved.
+        </div>
+
+    </footer>
+
+</main>
 
 </body>
 </html>
