@@ -1,1 +1,303 @@
 
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AQS — Account &amp; Data Deletion | ArchTek Nexus</title>
+
+<meta
+    name="description"
+    content="Request deletion of an AQS account and associated data."
+>
+
+<style>
+:root {
+    --bg: #080C11;
+    --panel: #0D141B;
+    --border: #1C303B;
+    --cyan: #00E5FF;
+    --cyan-soft: #65F2FF;
+    --text: #E6F7FA;
+    --muted: #91A7AE;
+    --green: #39E58C;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background:
+        radial-gradient(
+            circle at 50% -10%,
+            rgba(0, 229, 255, 0.08),
+            transparent 38%
+        ),
+        var(--bg);
+    color: var(--text);
+    font-family:
+        Inter,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+    line-height: 1.65;
+}
+
+.page {
+    width: min(100% - 32px, 820px);
+    margin: 0 auto;
+    padding: 42px 0 60px;
+}
+
+.header {
+    padding: 30px;
+    margin-bottom: 20px;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    background:
+        linear-gradient(
+            145deg,
+            rgba(0, 229, 255, 0.06),
+            rgba(13, 20, 27, 0.96) 45%
+        );
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 18px;
+    color: var(--cyan);
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.brand-mark {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--cyan);
+    box-shadow: 0 0 12px rgba(0, 229, 255, 0.8);
+}
+
+h1 {
+    margin: 0;
+    font-size: clamp(2rem, 5vw, 2.8rem);
+    line-height: 1.1;
+}
+
+.subtitle {
+    margin: 12px 0 0;
+    color: var(--muted);
+}
+
+.panel {
+    padding: 26px;
+    margin-top: 14px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: var(--panel);
+}
+
+.panel h2 {
+    margin-top: 0;
+    color: var(--cyan-soft);
+    font-size: 1.15rem;
+}
+
+.panel p {
+    color: #C9DCE0;
+}
+
+.action-panel {
+    border-color: rgba(0, 229, 255, 0.35);
+    background:
+        linear-gradient(
+            135deg,
+            rgba(0, 229, 255, 0.07),
+            rgba(13, 20, 27, 0.96)
+        );
+}
+
+.delete-button {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 12px 18px;
+    border: 1px solid rgba(0, 229, 255, 0.5);
+    border-radius: 9px;
+    background: rgba(0, 229, 255, 0.08);
+    color: var(--cyan);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.delete-button:hover {
+    background: rgba(0, 229, 255, 0.16);
+    color: white;
+}
+
+.note {
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.footer {
+    margin-top: 32px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.82rem;
+}
+
+a {
+    color: var(--cyan);
+}
+
+@media (max-width: 600px) {
+    .page {
+        width: min(100% - 20px, 820px);
+        padding: 20px 0 40px;
+    }
+
+    .header,
+    .panel {
+        padding: 20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<main class="page">
+
+    <header class="header">
+
+        <div class="brand">
+            <span class="brand-mark"></span>
+            ArchTek Nexus
+        </div>
+
+        <h1>AQS Account &amp; Data Deletion</h1>
+
+        <p class="subtitle">
+            Request deletion of your ArchTek Nexus Quant System (AQS)
+            account and associated account data.
+        </p>
+
+    </header>
+
+
+    <section class="panel">
+
+        <h2>About Account Deletion</h2>
+
+        <p>
+            AQS provides an in-app option for users to delete their account
+            through the <strong>Account &amp; Privacy</strong> section.
+        </p>
+
+        <p>
+            This page provides an external way to initiate an account
+            deletion request if you no longer have access to the AQS
+            application.
+        </p>
+
+    </section>
+
+
+    <section class="panel action-panel">
+
+        <h2>Request Account Deletion</h2>
+
+        <p>
+            To request deletion of your AQS account and associated data,
+            contact ArchTek Nexus using the button below.
+        </p>
+
+        <p>
+            Please send the request from the email address associated with
+            your AQS account where possible. This helps us verify the
+            account associated with the request.
+        </p>
+
+        <a
+            class="delete-button"
+            href="mailto:support@archteknexus.co.za?subject=AQS%20Account%20Deletion%20Request"
+        >
+            Request Account Deletion
+        </a>
+
+        <p class="note">
+            Email: support@archteknexus.co.za
+        </p>
+
+    </section>
+
+
+    <section class="panel">
+
+        <h2>What Happens Next?</h2>
+
+        <p>
+            ArchTek Nexus will review the request and use the information
+            provided to identify the relevant AQS account and process the
+            deletion request.
+        </p>
+
+        <p>
+            Where additional verification is reasonably required, ArchTek
+            Nexus may contact the requester before completing the deletion.
+        </p>
+
+        <p>
+            Account deletion requests are handled in accordance with the
+            AQS Privacy Policy and applicable data-handling requirements.
+        </p>
+
+    </section>
+
+
+    <section class="panel">
+
+        <h2>Need Help?</h2>
+
+        <p>
+            For privacy questions, data requests, or assistance with an
+            account deletion request, contact:
+        </p>
+
+        <p>
+            <a href="mailto:support@archteknexus.co.za">
+                support@archteknexus.co.za
+            </a>
+        </p>
+
+    </section>
+
+
+    <footer class="footer">
+
+        <strong>ArchTek Nexus</strong><br>
+        AQS — ArchTek Nexus Quant System<br><br>
+
+        <a href="https://archteknexus.github.io/privacy-policy/">
+            Privacy Policy
+        </a>
+
+    </footer>
+
+</main>
+
+</body>
+</html>
+```
